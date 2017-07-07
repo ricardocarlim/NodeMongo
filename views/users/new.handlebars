@@ -1,0 +1,127 @@
+ <div class="container">
+    <div class="row">
+        <form class="form-horizontal" action="/users/new" method="post">
+            <fieldset>
+            <legend>Cadastro de Usuário</legend>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="fullname">Perfil</label>  
+                <div class="col-md-6">                        
+                    <select name="profile_id" id="profile_id" class="form-control input-md">                        
+                        <option value="" >Selecione um perfil...</option>
+                        {{#each profiles}}
+                            <option value="{{_id}}">{{Profile}}</option>
+                        {{/each}}                        
+                    </select>                
+                </div>
+                </div>
+                <input type="hidden" value="" name="_id" id="_id" />
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="fullname">Nome</label>  
+                <div class="col-md-6">
+                <input id="Name" name="Name" type="text" placeholder="seu nome" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="cpf">Documento</label>  
+                <div class="col-md-4">
+                <input id="Document" name="Document" type="text" placeholder="seu CPF" class="form-control input-md">
+                </div>
+                </div>           
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="birth"><i class="fa fa-birthday-cake"></i> Data de Nascimento</label>  
+                <div class="col-md-2">
+                <input id="Birth" name="Birth" type="date" placeholder="Data de Nascimento" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="email"><i class="fa fa-envelope-o " ></i> E-mail</label>  
+                <div class="col-md-4">
+                <input id="Email" name="Email" type="text" placeholder="seu E-mail" class="form-control input-md">
+                </div>
+                </div>
+            </fieldset>
+            <fieldset>               
+                <legend>Endereço</legend>
+                  <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="ZipCode">CEP</label>  
+                <div class="col-md-2">
+                    <input id="ZipCode" name="ZipCode" type="number" placeholder="CEP" class="form-control input-md">
+                </div>
+                </div>
+                 <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Address_Geolocalization"> <i class="fa fa-map-marker" ></i> Geolocalização</label>  
+                <div class="col-md-6">
+                    <input id="Address_Geolocalization" name="Address_Geolocalization" type="text" placeholder="Geolocalização" class="form-control input-md">
+                </div>
+                </div> 
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Address_Location"><i class="fa fa-location-arrow" ></i> Logradouro</label>  
+                <div class="col-md-6">
+                    <input id="Address_Location" name="Address_Location" type="text" placeholder="Logradouro" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Address_Number">Numero</label>  
+                <div class="col-md-3">
+                    <input id="Address_Number" name="Address_Number" type="number" placeholder="Numero" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Address_Complement">Complemento</label>  
+                <div class="col-md-6">
+                    <input id="Address_Complement" name="Address_Complement" type="text" placeholder="Complemento" class="form-control input-md">
+                </div>
+                </div>               
+            </fieldset>
+            <fieldset>
+                <legend>Contato</legend>
+              <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Contact_Name"><i class="fa fa-users" ></i> Nome Contato</label>  
+                <div class="col-md-6">
+                    <input id="Contact_Name" name="Contact_Name" type="text" placeholder="Nome Contato" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Contact_Company"><i class="fa fa-building-o" ></i> Empresa do Contato</label>  
+                <div class="col-md-6">
+                    <input id="Contact_Company" name="Contact_Company" type="text" placeholder="Empresa do Contato" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Contact_CellPhone"><i class="fa fa-mobile" ></i> Celular de Contato</label>  
+                <div class="col-md-3">
+                    <input id="Contact_CellPhone" name="Contact_CellPhone" type="text" placeholder="Celular do Contato" class="form-control input-md">
+                </div>
+                </div>
+             </fieldset>
+            <!-- Button (Double) -->
+            <div class="form-group">
+            <label class="col-md-4 control-label" for="Cadastrar"></label>
+            <div class="col-md-8">
+                <input type="submit" value="Cadastrar" class="btn btn-success"></button>
+                
+            </div>
+            </div>
+
+        </form>
+	</div>
+</div>
+
+{{#section 'scripts'}}
+    <script>
+        
+    </script>
+{{/section}}

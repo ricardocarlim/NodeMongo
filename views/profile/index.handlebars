@@ -1,0 +1,47 @@
+ <div class="container">
+    <div class="row">
+        <form class="form-horizontal" action="./" method="GET">
+            <fieldset>
+            <legend>Buscar Perfil</legend>            
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Profile">Perfil</label>  
+                    <div class="col-md-6">
+                        <input id="Profile" name="Profile" type="text" placeholder="Perfil" value="{{filtro.Profile}}" class="form-control input-md">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Buscar"></label>
+                    <div class="col-md-8">
+                        <a href="/profile/new/" class="" >Novo Perfil</a>
+                        <input type="submit" value="Buscar" class="btn btn-success"></button>                                        
+                    </div>
+                </div>                
+            </fieldset>
+            {{#if profiles}}
+                <fieldset>
+                <legend>Resultado</legend>
+                    <div class="container">            
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Perfil</th>
+                                <th>Alterar</th>
+                                <th>Excluir</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {{#each profiles}}
+                                    <tr>
+                                        <td>{{Profile}}</td>
+                                        <td><a href="/profile/edit/{{_id}}"><i class="fa fa-pencil-square-o"></a></td>
+                                        <td><a href="/profile/delete/{{_id}}?filtro={{filtro.Profile}}"><i class="fa fa-trash-o"></a></td>
+                                    </tr>            
+                                {{/each}} 
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+            {{/if}}            
+        </form>
+    </div>
+ </div>

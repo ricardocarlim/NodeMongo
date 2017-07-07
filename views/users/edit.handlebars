@@ -1,0 +1,126 @@
+ <div class="container">
+    <div class="row">
+        <form class="form-horizontal" action="./{{users._id}}" method="post">
+            <fieldset>
+            <legend>Edição de Usuário</legend>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="fullname">Perfil</label>  
+                    <div class="col-md-6">                        
+                        <select name="profile_id" id="profile_id" class="form-control input-md">                        
+                            <option value="" >Selecione um perfil...</option>
+                            {{#each profiles}}                               
+                                <option {{#compare _id "==" profile_id }}selected="selected"{{/compare}} value="{{_id}}">{{Profile}}</option>                                
+                            {{/each}}                        
+                        </select>                
+                    </div>
+                </div>                                  
+                <!-- Text input-->
+                <input type="hidden" value="{{users._id}}" name="_id" id="_id" />
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="fullname">Nome</label>  
+                <div class="col-md-6">
+                <input id="Name" name="Name" type="text" placeholder="seu nome" value="{{users.Name}}" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="cpf">Documento</label>  
+                <div class="col-md-4">
+                <input id="Document" name="Document" type="text" placeholder="seu CPF" value="{{users.Document}}" class="form-control input-md">
+                </div>
+                </div>           
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="birth"><i class="fa fa-birthday-cake"></i> Data de Nascimento</label>  
+                <div class="col-md-2">
+                <input id="Birth" name="Birth" type="date" placeholder="Data de Nascimento" value="{{users.Birth}}" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="email"><i class="fa fa-envelope-o " ></i> E-mail</label>  
+                <div class="col-md-4">
+                <input id="Email" name="Email" type="text" placeholder="seu E-mail" value="{{users.Email}}" class="form-control input-md">
+                </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+                 <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="ZipCode">CEP</label>  
+                <div class="col-md-2">
+                    <input id="ZipCode" name="ZipCode" type="number" placeholder="CEP" value="{{users.ZipCode}}" class="form-control input-md">
+                </div>
+                </div>
+                 <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Address_Geolocalization"> <i class="fa fa-map-marker" ></i> Geolocalização</label>  
+                <div class="col-md-6">
+                    <input id="Address_Geolocalization" name="Address_Geolocalization" value="{{users.Address_Geolocalization}}" type="text" placeholder="Geolocalização" class="form-control input-md">
+                </div>
+                </div> 
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Address_Location"><i class="fa fa-location-arrow" ></i> Logradouro</label>  
+                <div class="col-md-6">
+                    <input id="Address_Location" name="Address_Location" type="text" placeholder="Logradouro" value="{{users.Address_Location}}" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Address_Number">Numero</label>  
+                <div class="col-md-3">
+                    <input id="Address_Number" name="Address_Number" type="number" placeholder="Numero" value="{{users.Address_Number}}" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Address_Complement">Complemento</label>  
+                <div class="col-md-6">
+                    <input id="Address_Complement" name="Address_Complement" type="text" value="{{users.Address_Complement}}" placeholder="Complemento" class="form-control input-md">
+                </div>
+                </div>               
+            </fieldset>
+            <fieldset>
+                <legend>Contato</legend>
+              <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Contact_Name"><i class="fa fa-users" ></i> Nome Contato</label>  
+                <div class="col-md-6">
+                    <input id="Contact_Name" name="Contact_Name" type="text" value="{{users.Contact_Name}}" placeholder="Nome Contato" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Contact_Company"><i class="fa fa-building-o" ></i> Empresa do Contato</label>  
+                <div class="col-md-6">
+                    <input id="Contact_Company" name="Contact_Company" type="text" value="{{users.Contact_Company}}" placeholder="Empresa do Contato" class="form-control input-md">
+                </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                <label class="col-md-4 control-label" for="Contact_CellPhone"><i class="fa fa-mobile" ></i> Celular de Contato</label>  
+                <div class="col-md-3">
+                    <input id="Contact_CellPhone" name="Contact_CellPhone" type="text" value="{{users.Contact_CellPhone}}" placeholder="Celular do Contato" class="form-control input-md">
+                </div>
+                </div>
+             </fieldset>
+            <!-- Button (Double) -->
+            <div class="form-group">
+            <label class="col-md-4 control-label" for="Editar"></label>
+            <div class="col-md-8">
+                <input type="submit" value="Editar" class="btn btn-success"></button>
+                
+            </div>
+            </div>
+
+        </form>
+	</div>
+</div>
+
+{{#section 'scripts'}}
+    <script>
+        
+    </script>
+{{/section}}

@@ -1,0 +1,22 @@
+ <div class="container">
+    <div class="row">
+        <form class="form-horizontal" action="./{{profile._id}}" method="POST">
+            <fieldset>
+            <legend>Editar Perfil</legend>            
+                <div class="form-group">
+                    <input type="hidden" value="{{profile._id}}" name="_id" id="_id" />
+                    <label class="col-md-4 control-label" for="Profile">Perfil</label>  
+                    <div class="col-md-6">
+                        <input id="Profile" name="Profile" type="text" value="{{profile.Profile}}" placeholder="Perfil"  class="form-control input-md">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Editar"></label>
+                    <div class="col-md-8">                        
+                        <input type="submit" value="Editar" class="btn btn-success"></button>                                        
+                    </div>
+                </div>                
+            </fieldset>
+        </form>
+    </div>
+</div>

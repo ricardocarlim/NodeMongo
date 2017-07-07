@@ -1,0 +1,60 @@
+<h1>
+    Users
+</h1>
+    {{#each users}}
+        <ul>
+            <li>
+                <b>Name:</b> {{Name}} <br/>    
+            </li>
+            <li>
+                <b>Birth:</b> {{Birth}} <br/>    
+            </li>
+            <li>
+                <b>Document:</b> {{Document}} <br/>    
+            </li>
+             <li>
+                <b>Status:</b> {{Status}} <br/>    
+            </li>
+            <li>    
+                <b>Address: </b>
+                <ul>
+                     {{#each Address}}                                        
+                        <li>
+                            <b>Adddress_Location:</b> {{Adddress_Location}} <br/> 
+                        </li>
+                        <li>
+                            <b>Address_Number:</b> {{Address_Number}} <br/> 
+                        </li>
+                        <li>
+                            <b>Address_Complement:</b> {{Address_Complement}} <br/> 
+                        </li>
+                        <li>
+                            <b>ZipCode:</b> {{ZipCode}} <br/> 
+                        </li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li>    
+                <b>Contacts:</b> 
+                <ul>
+                     {{#each Contacts}}                                        
+                        <li>
+                            <b>Contact_Name:</b> {{Contact_Name}} <br/> 
+                        </li>
+                        <li>
+                            <b>Contact_Company:</b> {{Contact_Company}} <br/> 
+                        </li>
+                        <li>
+                            <b>Contact_CellPhone:</b> {{Contact_CellPhone}} <br/> 
+                        </li>                        
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>               
+    {{/each}}    
+
+    <br>
+    <form action="./" method="post" >
+        <input type="submit" value="testesubmit">
+    </form>
+    
